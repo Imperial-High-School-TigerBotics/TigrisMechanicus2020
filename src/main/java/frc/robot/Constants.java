@@ -16,8 +16,8 @@ public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
 
-    public static final int YAxis = 1;
-    public static final int XAxis = 0;
+    public static final int YAxis = 0;
+    public static final int XAxis = 1;
     public static final int SliderAxis = 3;
   }
 
@@ -34,8 +34,8 @@ public final class Constants {
   }
 
   public static class speedFactors{
-    public static final double shooterSpeed = 0.75;
+    public static final double shooterSpeed = 0.85;
     public static final double sliderMax = 0.90;
-    public static final double intakeSpeed = 0.5;
+    public static final double intakeSpeed = 0.65;
   }
 }

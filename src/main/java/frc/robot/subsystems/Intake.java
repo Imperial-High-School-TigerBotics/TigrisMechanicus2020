@@ -31,10 +31,7 @@ public class Intake extends SubsystemBase {
   {
     if( joy2.getAsBoolean()){
       in();
-    }else{
-      stop();
-    }
-    if(joy3.getAsBoolean()){
+    }else if(joy3.getAsBoolean()){
       out();
     }else{
       stop();
@@ -42,12 +39,12 @@ public class Intake extends SubsystemBase {
   }
 
   public Command in(){
-    intake.set(speedFactors.intakeSpeed);
+    intake.set(-speedFactors.intakeSpeed);
     return null;
   }
   
   public Command out(){
-    intake.set(-speedFactors.intakeSpeed);
+    intake.set(speedFactors.intakeSpeed);
     return null;
   }
 

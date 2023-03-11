@@ -36,8 +36,8 @@ public class DriveTrain extends SubsystemBase {
 
         double speedChanger = -controller.getRawAxis(3);
 
-        double Yspeed = -controller.getRawAxis(OperatorConstants.YAxis) * speedChanger;
-        double Xspeed = controller.getRawAxis(OperatorConstants.XAxis) * speedChanger;
+        double Yspeed = controller.getRawAxis(OperatorConstants.YAxis) * speedChanger;
+        double Xspeed = -controller.getRawAxis(OperatorConstants.XAxis) * speedChanger;
 
         double left = Yspeed + Xspeed;
         double right = Yspeed - Xspeed;

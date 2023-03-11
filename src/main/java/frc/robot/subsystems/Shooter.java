@@ -31,11 +31,7 @@ public class Shooter extends SubsystemBase {
   {
     if( joy1.getAsBoolean()){
       start();
-    }else{
-      stop();
-    }
-  
-    if( joy3.getAsBoolean()){
+    }else if( joy3.getAsBoolean()){
       outtake();
     }else{
       stop();
@@ -49,7 +45,7 @@ public class Shooter extends SubsystemBase {
   }
 
   public Command outtake(){
-    shooter.set(speedFactors.shooterSpeed);
+    shooter.set(-speedFactors.shooterSpeed);
     return null;
   }
 
